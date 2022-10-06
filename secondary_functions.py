@@ -20,6 +20,7 @@ def winery_age():
     elif 5 <= age % 10 <= 9 or age % 10 == 0:
         return f'{age} лет'
 
+
 def data_from_file(file_address):
     wine_collection = pandas.read_excel(Path(file_address), na_values=['NA'], keep_default_na=False)
     beverages = collections.defaultdict(list)
@@ -45,4 +46,3 @@ def data_from_file(file_address):
             beverages_sample[category].append(temp)
 
     return beverages_sample
-
