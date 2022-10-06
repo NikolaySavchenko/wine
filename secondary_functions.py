@@ -21,7 +21,7 @@ def get_winery_age():
         return f'{age} лет'
 
 
-def get_data_from_file(file_address):
+def get_from_file(file_address):
     wine_collection = pandas.read_excel(Path(file_address), na_values=['NA'], keep_default_na=False)
     beverages = collections.defaultdict(list)
 
