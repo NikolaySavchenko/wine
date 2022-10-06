@@ -1,7 +1,6 @@
 from http.server import HTTPServer, SimpleHTTPRequestHandler
-from secondary_functions import winery_age
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-from secondary_functions import data_from_file
+from secondary_functions import winery_age, data_from_file
 import argparse
 
 env = Environment(
