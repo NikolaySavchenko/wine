@@ -5,6 +5,6 @@ __pycache__/
 *.xlsx
 .replit
 index.html
-
+!wine.xlsx
 
 
