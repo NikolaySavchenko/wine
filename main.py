@@ -11,8 +11,8 @@ def main():
     )
     template = env.get_template('template.html')
     parser = argparse.ArgumentParser('Input Excel file address')
-    parser.add_argument('file')
-    file_address = parser.parse_args().file
+    parser.add_argument('filepath')
+    file_address = parser.parse_args().filepath
     rendered_page = template.render(wine=data_from_file(file_address), age=winery_age())
 
     with open('index.html', 'w', encoding="utf8") as file:
