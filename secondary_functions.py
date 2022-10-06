@@ -5,8 +5,7 @@ from pathlib import Path
 
 
 def get_winery_age():
-    age = (datetime.datetime.today().year -
-           datetime.datetime(year=1920, month=1, day=1).year)
+    age = (datetime.datetime.today().year - 1920)
     if age % 100 == 1:
         return f'{age} год'
     elif 2 <= age % 100 <= 4:
