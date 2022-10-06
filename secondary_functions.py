@@ -31,18 +31,4 @@ def get_from_file(file_address):
             temp[characteristic] = product[characteristic]
         beverages[product['Категория']].append(temp)
 
-    beverages_sample = dict()
-    for category in beverages:
-        beverages_sample[category] = list()
-        for product in beverages[category]:
-            temp = {
-                "title": product['Название'],
-                "price": int(product['Цена']),
-                "image": Path(f"images/{product['Картинка']}"),
-                "sort": product['Сорт'],
-                "category": product['Категория'],
-                "sales": product['Акция']
-            }
-            beverages_sample[category].append(temp)
-
-    return beverages_sample
+    return beverages
