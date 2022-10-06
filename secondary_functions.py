@@ -4,7 +4,7 @@ import collections
 from pathlib import Path
 
 
-def winery_age():
+def get_winery_age():
     age = (datetime.datetime.today().year -
            datetime.datetime(year=1920, month=1, day=1).year)
     if age % 100 == 1:
@@ -21,7 +21,7 @@ def winery_age():
         return f'{age} лет'
 
 
-def data_from_file(file_address):
+def get_data_from_file(file_address):
     wine_collection = pandas.read_excel(Path(file_address), na_values=['NA'], keep_default_na=False)
     beverages = collections.defaultdict(list)
 
