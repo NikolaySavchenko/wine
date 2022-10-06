@@ -7,11 +7,15 @@
 - Скачайте код
 - Установите необходимые библиотеки. Для этого используйте команду:
 
-`pip install -r requirements.txt`
+```
+pip install -r requirements.txt
+```
 
 - Запустите сайт командой
 
-`python3 main.py file_address`
+```
+python3 main.py file_address
+```
 
 Где `file_address` - адрес файла с данными по напиткам.
 Требования к файлу с данными: файл Excel, аналог файла wine.xlsx 
