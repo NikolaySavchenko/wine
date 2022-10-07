@@ -23,11 +23,6 @@ def get_winery_age():
 def get_from_file(file_address):
     wine_collection = pandas.read_excel(Path(file_address), na_values=['NA'], keep_default_na=False)
     beverages = collections.defaultdict(list)
-
     for product in wine_collection.to_dict(orient='records'):
-        temp = dict()
-        for characteristic in product:
-            temp[characteristic] = product[characteristic]
-        beverages[product['Категория']].append(temp)
-
+        beverages[product['Категория']].append(product)
     return beverages
