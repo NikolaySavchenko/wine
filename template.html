@@ -118,7 +118,7 @@
         </div>
         <div class="row">
           {% for Категория, drinks in beverages.items() %}
-          <div class="col-12 section-title text-center mb-5">
+            <div class="col-12 section-title text-center mb-5">
             <h2 class="d-block">{{Категория}}</h2>
             <div class="row">
               {% for drink in drinks %}
@@ -126,14 +126,14 @@
                 <div class="wine_v_1 text-center pb-4 pt-5">
                   <img src="images/{{drink.Картинка}}" alt="Image" class="img-fluid">
                   {% if drink.Акция %}
-                  <img src="assets/profitable.png"
-                  style="width:10rem;height: 10rem;position:absolute;right: -20px;top: -20px;">
+                    <img src="assets/profitable.png"
+                    style="width:10rem;height: 10rem;position:absolute;right: -20px;top: -20px;">
                   {% endif %}
                   <div>
                     <h3 class="heading mt-3 mb-3 text-dark">{{drink.Название}}</h3>
                     <p>
                       {% if drink.Сорт %}
-                      Сорт винограда - {{drink.Сорт}}<br/>
+                        Сорт винограда - {{drink.Сорт}}<br/>
                       {% endif %}
                       <span class="price">{{drink.Цена}}</span> р
                     </p>
