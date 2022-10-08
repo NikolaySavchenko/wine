@@ -1,6 +1,6 @@
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-from utils import get_winery_age, get_from_file
+from utils import get_winery_age, get_beverages_from_file
 import argparse
 
 
@@ -13,7 +13,8 @@ def main():
     parser = argparse.ArgumentParser(description='Input Excel file path')
     parser.add_argument('filepath', help='Input Excel file path')
     file_path = parser.parse_args().filepath
-    rendered_page = template.render(wine=get_from_file(file_path), age=get_winery_age())
+    rendered_page = template.render(wine=get_beverages_from_file(file_path), 
+                                    age=get_winery_age())
 
     with open('index.html', 'w', encoding="utf8") as file:
         file.write(rendered_page)
