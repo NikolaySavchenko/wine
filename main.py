@@ -13,7 +13,7 @@ def main():
     parser = argparse.ArgumentParser(description='Input Excel file path')
     parser.add_argument('filepath', help='Input Excel file path')
     file_path = parser.parse_args().filepath
-    rendered_page = template.render(wine=get_beverages_from_file(file_path), 
+    rendered_page = template.render(beverages=get_beverages_from_file(file_path),
                                     age=get_winery_age())
 
     with open('index.html', 'w', encoding="utf8") as file:
