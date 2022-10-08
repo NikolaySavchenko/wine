@@ -21,8 +21,8 @@ def get_winery_age():
         return f'{age} лет'
 
 
-def get_from_file(file_address):
-    wine_collection = pandas.read_excel(Path(file_address), na_values=['NA'], keep_default_na=False)
+def get_from_file(file_path):
+    wine_collection = pandas.read_excel(Path(file_path), na_values=['NA'], keep_default_na=False)
     beverages = collections.defaultdict(list)
     for product in wine_collection.to_dict(orient='records'):
         beverages[product['Категория']].append(product)

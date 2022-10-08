@@ -10,8 +10,8 @@ def main():
         autoescape=select_autoescape(['html', 'xml'])
     )
     template = env.get_template('template.html')
-    parser = argparse.ArgumentParser(description='Input Excel file address')
-    parser.add_argument('filepath', help='Input Excel file address')
+    parser = argparse.ArgumentParser(description='Input Excel file path')
+    parser.add_argument('filepath', help='Input Excel file path')
     file_path = parser.parse_args().filepath
     rendered_page = template.render(wine=get_from_file(file_path), age=get_winery_age())
 
